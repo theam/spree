@@ -16,6 +16,8 @@ module Spree
       number.gsub!(separator, '.') unless separator == '.'
 
       number.to_d
+    rescue ArgumentError
+      0.to_d
     end
 
   end
